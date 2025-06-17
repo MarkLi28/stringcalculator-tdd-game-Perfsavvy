@@ -3,8 +3,14 @@
 def add(numbers):
     if numbers == "":
         return 0
-    
-    commas = numbers.replace("\n",",")
+    delimiter = ","
+
+    if numbers.startswith("//"):
+        header, numbers = numbers.split("\n", 1)
+        delimiter = header[2:] 
+
+    numbers = numbers.replace("\n", delimiter).replace(delimiter, ",")
+
     parts = commas.split(",")
     nums = [int(p) for p in parts if p.strip() != ""]
     return sum(nums)
