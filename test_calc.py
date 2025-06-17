@@ -21,3 +21,5 @@ def test_multiple_numbers_return_sum():
     assert add("1,2,3,4,5") == 15
 def test_custom_delimiters():
     assert add("//;\n1;2") == 3
+def test_negatives():
+    assert add("1,-1,3") == "negatives not allowed: -1"
