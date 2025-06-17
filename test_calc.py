@@ -14,4 +14,4 @@ def test_example_string_returns_zero():
 def test_single_number_returns_itself():
     assert add("5") == 5
 def test_two_numbers_return_sum():
-    assert add(1,2) == 3
+    assert add("1,2") == 3
