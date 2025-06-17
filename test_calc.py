@@ -17,3 +17,7 @@ def test_two_numbers_return_sum():
     assert add("1,2") == 3
 def test_newline_delimiters_are_allowed():
     assert add("1\n2,3") == 6
+def test_multiple_numbers_return_sum():
+    assert add("1,2,3,4,5") == 15
+def test_custom_delimiters():
+    assert add("//;\n1;2") == 3
